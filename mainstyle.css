@@ -1,0 +1,391 @@
+body{
+    user-select:none;
+}
+#container{
+    position:relative;
+    height:90%;
+    width:99%;
+}
+
+.game-board-hidden{
+    display:none;
+}
+.game-board {
+    position:absolute;
+    display:block;
+    left:-890;
+    top:0;
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    z-index:1;
+    animation:1s showBoard linear forwards;
+    grid-gap:10px;
+    
+}
+
+@keyframes showBoard{
+    to{
+	left:0;
+    }
+}
+
+#players{
+    position:absolute;
+    left:620px;
+    top:30px;
+    z-index:1;
+}
+
+#players>#player1{
+    position:absolute;
+    height:44px;
+    font-size:44px;
+    font-size:18px;
+    padding:15px;
+}
+
+#players>#player2{
+    position:absolute;
+    top:50px;
+    height:44px;
+    font-size:18px;
+    padding:15px;
+}
+
+.buttons:hover{
+    border:3px #008CBA solid;
+    Background-color:white;
+    color:#008CBA;
+}
+
+#startGame{
+    top:100px;
+}
+
+.buttons{
+    position:absolute;
+    width:160px;
+    border:3px #008CBA solid;
+    font-size:25px;
+    color:white;
+    Background-color:#008CBA;
+    transition: 3s border, Background-color 1s ,color 1s, box-shadow 0.1s;
+}
+
+.buttons:active{
+    box-shadow:2px 2px 2px #008CBA;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    background: #444;
+    border: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size:200px;
+    user-select:none;
+}
+
+.box:hover{
+    transform:scale(1.05);
+}
+::placeholder{
+    font-size:15px;
+}
+
+.resultsHidden{
+    display:none;
+}
+
+.results{
+    position:absolute;
+    display:block;
+    z-index:20;
+    left:630px;
+    top:0px;
+    animation:1s resultsAnimation linear;
+    height:400px;
+}
+
+@keyframes resultsAnimation{
+    0%{
+	top:-200px;
+    }
+    100%{
+	top:0px;
+    }
+}
+
+th, td{
+    border-right:1px solid black;
+    border-bottom:1px solid grey;
+    padding:10px;
+
+}
+td:hover,th:hover{
+        transform:scale(1.05);
+}
+#dataTable{
+    text-align:center;
+    font-size:30px;
+}
+
+th{
+    Background-color:grey;
+
+}
+
+#tableElements2{
+    Background-color:#f48942;
+}
+
+#tableElements3{
+    Background-color:#5cf441;
+}
+
+#nextGame{
+    position:absolute;
+    bottom:150px;
+    height:70px;
+}
+
+#resetBoard{
+    position:absolute;
+    bottom:-300px;
+    left:700px;
+    height:70px;
+}
+
+#winner{
+    position:absolute;
+    display:none;
+    top:250px;
+    left:30px;
+    font-size:40px;
+    color:#f48942;
+    text-shadow:3px 1px 3px black;
+    font-family:"Arial black";
+    animation:2s winnerAnimation linear infinite;
+}
+
+@keyframes winnerAnimation{
+    0%{
+	color:#f48942;
+	transform:scale(0);
+    }
+    25%{
+	transform:scale(1.1);
+	color:#5cf441;
+    }
+    40%{
+	transform:scale(1);
+    }
+    60%{
+	transform:scale(1.1);
+    }
+    100%{
+	transform:scale(1);
+	color:#f48942;
+    }
+}
+
+
+/*Animation horizontal 1*/
+.horizontal1{
+    position:absolute;
+    animation:horizontal1Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes horizontal1Animation{
+    0%{
+	height:10px;
+	width:0;
+	top:100px;
+	left:10px;
+    }
+    100%{
+	height:10px;
+	width:600px;
+	top:100px;
+	left:10px;
+    }
+}
+
+/*Animation horizontal 2*/
+
+.horizontal2{
+    position:absolute;
+    animation:horizontal2Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes horizontal2Animation{
+    0%{
+	height:10px;
+	width:0;
+	top:310px;
+	left:10px;
+    }
+    100%{
+	height:10px;
+	width:600px;
+	top:310px;
+	left:10px;
+    }
+}
+
+
+/*Animation horizontal 3*/
+
+.horizontal3{
+    position:absolute;
+    animation:horizontal3Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes horizontal3Animation{
+    0%{
+	height:10px;
+	width:0;
+	top:510px;
+	left:10px;
+    }
+    100%{
+	height:10px;
+	width:600px;
+	top:510px;
+	left:10px;
+    }
+}
+
+/*Vertical animation 1*/
+
+.vertical1{
+    position:absolute;
+    animation:vertical1Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes vertical1Animation{
+    0%{
+	height:0px;
+	width:10px;
+	top:10px;
+	left:100px;
+    }
+    100%{
+	height:600px;
+	width:10px;
+	top:10px;
+	left:100px;
+    }
+}
+
+/*Vertical animation 2*/
+
+.vertical2{
+    position:absolute;
+    animation:vertical2Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes vertical2Animation{
+    0%{
+	height:0px;
+	width:10px;
+	top:10px;
+	left:310px;
+    }
+    100%{
+	height:600px;
+	width:10px;
+	top:10px;
+	left:310px;
+    }
+}
+
+/*Vertical animation 3*/
+
+.vertical3{
+    position:absolute;
+    animation:vertical3Animation 0.5s forwards;
+    Background-color:orange;
+    z-index:30;
+}
+
+@keyframes vertical3Animation{
+    0%{
+	height:0px;
+	width:10px;
+	top:10px;
+	left:510px;
+    }
+    100%{
+	height:600px;
+	width:10px;
+	top:10px;
+	left:510px;
+    }
+}
+
+/*Diagonal animation 1*/
+
+.diagonal1{
+    position:absolute;
+    animation:diagonal1Animation 0.5s forwards;
+    Background-color:orange;
+    transform:rotate(-45deg);
+    transform-origin:left;
+    top:600px;
+    left:10px;
+    z-index:30;
+    height:10px;
+    width:0;
+}
+
+@keyframes diagonal1Animation{
+    0%{
+    }
+    100%{
+	width:838px;
+    }
+}
+
+/*Diagonal animation 1*/
+
+.diagonal2{
+    position:absolute;
+    animation:diagonal2Animation 0.5s forwards;
+    Background-color:orange;
+    transform:rotate(45deg);
+    transform-origin:right;
+    top:600px;
+    left:600px;
+    z-index:30;
+    height:10px;
+    width:0;
+}
+
+@keyframes diagonal2Animation{
+    0%{
+    }
+    100%{
+	top:600px;
+	left:-230px;
+	width:838px;
+    }
+}
+
+

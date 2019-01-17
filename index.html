@@ -1,0 +1,50 @@
+<html>
+    <head>
+	<link rel="stylesheet" href="mainstyle.css">
+	<title>X-O</title>
+    </head>
+    <body>
+	<div id="container">
+	    <div id="board" class="game-board-hidden">
+		<div id="b11" class="box"></div>
+		<div id="b12" class="box"></div>
+		<div id="b13" class="box"></div>
+		<div id="b21" class="box"></div>
+		<div id="b22" class="box"></div>
+		<div id="b23" class="box"></div>
+		<div id="b31" class="box"></div>
+		<div id="b32" class="box"></div>
+		<div id="b33" class="box"></div>
+		<div id="crossLine"></div>
+	    </div>
+	    <div id="players">
+		<input id="player1" placeholder="Enter name of first player">
+		<input id="player2" placeholder="Enter name of second player">
+		<button class="buttons" id="startGame">START GAME</button>
+	    </div>
+	    <div id="resultsID" class="resultsHidden">
+		<table id="dataTable">
+		    <tr id="tableElements1">
+			<th id="playerNames">NAME</th>
+			<th id="player1Name">FIRST</th>
+			<th id="player2Name">SECOND</th>
+		    </tr>
+		    <tr id="tableElements2">
+			<td id="playerScores">RESULT</td>
+			<td id="player1Score">0</td>
+			<td id="player2Score">0</td>
+		    </tr>
+		    <tr id="tableElements3">
+			<td id="playerMarks">PLAYING AS</td>
+			<td id="player1Mark">X</td>
+			<td id="player2Mark">O</td>
+		    </tr>
+		</table>
+		<button class="buttons" id="nextGame">NEXT GAME</button>
+		<button class="buttons" id="resetBoard">HOME PAGE</button>
+		<p id="winner">HAS WON</p>
+	    </div>
+	</div>
+    </body>
+    <script src="index.js"></script>
+</html>
